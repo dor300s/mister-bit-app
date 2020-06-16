@@ -1,0 +1,16 @@
+<div class="container">
+    <h2>Hello, {{user.name}}</h2>
+    <h3>Your Balance: {{user.coins}} BTC</h3>
+    <h3>BTC/USD: ${{(1/btcRate).toFixed(2)}}</h3>
+
+    <div class="transfers-wrapper">
+        <h3>Last transfers:</h3>
+        <div class="transfer-list">
+            <div class="transfer" *ngFor="let move of user.moves">
+                <h5>To: {{move.to}}</h5>
+                <h5>At: {{move.at | date}}</h5>
+                <h5>Amount: {{move.amount}}</h5>
+            </div>
+        </div>
+    </div>
+</div>

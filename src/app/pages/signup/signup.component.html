@@ -1,0 +1,7 @@
+<div class="signup-container">
+    <h2>Signup</h2>
+    <form (ngSubmit)="onSubmit()">
+        <input name="name" type="text" placeholder="name" [(ngModel)]="user.name" required>
+        <button>Signup</button>
+    </form>
+</div>

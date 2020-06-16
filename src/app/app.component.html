@@ -1,0 +1,18 @@
+<nav class="nav">
+    <h1 class="logo">Mister Bitcoin</h1>
+    <ul>
+        <li routerLink='/home'>Home</li>
+        <li routerLink='/contact'>Contacts</li>
+        <li routerLink='/statistic'>Statistics</li>
+        <li routerLink='/signup'>Signup</li>
+        <li (click)="onLogout()">Logout</li>
+    </ul>
+</nav>
+
+<router-outlet></router-outlet>
+
+<!-- <app-home *ngIf="page === 'home'"></app-home>
+<app-contact-page *ngIf="page === 'contact'"></app-contact-page>
+<app-statistic-page *ngIf="page === 'statistics'"></app-statistic-page> -->
+<!-- <app-contact-details-page></app-contact-details-page> -->
+<!-- <app-contact-filter></app-contact-filter> -->

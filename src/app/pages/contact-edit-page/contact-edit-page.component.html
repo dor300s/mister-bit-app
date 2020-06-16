@@ -1,0 +1,10 @@
+<div class="contact-edit-container">
+    <h2>{{contact.name ? 'Update contact' : 'Add contact'}}</h2>
+
+    <form #f="ngForm" (ngSubmit)="onSubmit()">
+        <input name="name" type="text" placeholder="Name" [(ngModel)]="contact.name" required />
+        <input name="email" type="text" placeholder="Email" [(ngModel)]="contact.email" required />
+        <input name="phone" type="text" placeholder="Phone" [(ngModel)]="contact.phone" required />
+        <button>{{contact.name ? 'Update' : 'Create'}}</button>
+    </form>
+</div>

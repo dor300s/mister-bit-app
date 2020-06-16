@@ -1,0 +1,14 @@
+<div *ngIf="contact" class="contact-container">
+    <div class="name-img">
+        <h2>{{contact.name}}</h2>
+        <img src='https://robohash.org/{{contact.name}}'>
+    </div>
+    <h3>Email: <span>{{contact.email}}</span></h3>
+    <h3>Phone: <span>{{contact.phone}}</span></h3>
+    <form *ngIf="user" (ngSubmit)="onTransfer()">
+        <input name="amount" type="number" placeholder="amount" [(ngModel)]="amount" required>
+        <button>Transfer</button>
+    </form>
+    <button [routerLink]="['/contact/edit',contact._id]">Edit</button>
+    <button class="delete-btn" (click)="onRemoveContact(contact._id)">Delete</button>
+</div>

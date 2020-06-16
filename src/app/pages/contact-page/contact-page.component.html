@@ -1,0 +1,12 @@
+<div class="users-container">
+    <div class="label-add-wrapper">
+        <h2>Contacts</h2>
+        <button routerLink="/contact/edit">Add</button>
+    </div>
+    <form>
+        <input name="txt" type="text" placeholder="Search" autocomplete="off" [(ngModel)]="filterBy.term" (input)="onFilter()"/>
+    </form>
+    <div *ngFor="let user of users" [routerLink]="['/contact',user._id]">
+        {{user.name}}
+    </div>
+</div>

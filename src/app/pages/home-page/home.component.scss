@@ -1,0 +1,22 @@
+.container {
+    margin: 50px 100px;
+    h2 {
+        margin-bottom: 20px;
+        font-size: 2rem;
+    }
+    .transfers-wrapper {
+        width: 250px;
+        h3 {
+            margin: 15px 0;
+        }
+        .transfer-list {
+            display: flex;
+            flex-direction: column-reverse;
+            .transfer {
+                border: 1px solid gray;
+                padding: 10px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
